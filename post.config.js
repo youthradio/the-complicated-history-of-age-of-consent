@@ -1,8 +1,8 @@
 export default {
-  baseURL: '/static-nuxt-template',
-  title: 'Static Template Title',
-  author: 'Static Author',
-  publishDate: 'Oct. 2, 2019',
+  baseURL: '/History-of-Age-Consent',
+  title: 'Illegal Or Just Creepy? The Complicated History of Age of Consent',
+  author: 'Jen Tribbet',
+  publishDate: 'Jan. 28, 2020',
   location: 'Oakland, CA',
   description: 'SEO friendly Description',
   url: 'CANONICAL URL',
