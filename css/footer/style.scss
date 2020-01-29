@@ -1,0 +1,351 @@
+@import "../vars";
+@import "../mixins";
+
+.connect-donate {
+  display: none;
+  text-align: right;
+  padding: 0 60px;
+
+  @include breakpoint(small) {
+    display: block;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 10px 30px;
+    margin-bottom: 40px;
+    font: 700 25px/1.6 "Roboto Mono", sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 6.67px;
+    color: white;
+    background-color: $blue;
+
+    &:hover {
+      background-color: $green;
+    }
+  }
+}
+
+.main-footer {
+  position: relative;
+
+  &.extra_space {
+    @media (max-width: 992px) {
+      padding-bottom: 60px;
+    }
+  }
+
+  .top-block {
+    padding: 50px 30px;
+    background-color: $black;
+
+    @include breakpoint(small) {
+      display: flex;
+      justify-content: space-between;
+      padding: 50px 60px;
+    }
+
+    & > div {
+      @include breakpoint(small) {
+        &:last-of-type {
+          order: 1;
+          display: flex;
+        }
+
+        &:first-of-type {
+          order: 2;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+      }
+    }
+
+    .logo {
+      display: none;
+      margin-right: 40px;
+      a {
+        display: block;
+        width: 70px;
+        height: 70px;
+        overflow: hidden;
+
+        .svg-logo {
+          transform: scale(1.65);
+        }
+      }
+
+      @include breakpoint(small) {
+        display: block;
+      }
+    }
+
+    .copyright {
+      display: none;
+      font: 300 17px/2 "Calps", sans-serif;
+      color: $grey;
+
+      @include breakpoint(small) {
+        display: block;
+      }
+    }
+  }
+
+  .pages-menu {
+    li {
+      font: 900 22px/1.8 "Roboto Mono", sans-serif;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      a {
+        color: $green;
+
+        &:hover {
+          color: white;
+        }
+      }
+
+      @include breakpoint(small) {
+        font: 500 19px/1.6 "Roboto Mono", sans-serif;
+        letter-spacing: 3px;
+      }
+    }
+
+    @include breakpoint(medium) {
+      column-count: 2;
+      column-gap: 40px;
+    }
+
+    @include breakpoint(large) {
+      column-width: 300px;
+    }
+  }
+
+  ul.social-menu {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+
+    li {
+      margin-right: 30px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      a {
+        span {
+          &:before {
+            color: $grey;
+            font-size: 24px;
+          }
+
+          &.icon-youtube {
+            &:before {
+              font-size: 20px;
+            }
+          }
+
+          &:hover {
+            &:before {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+
+    @include breakpoint(small) {
+      margin-top: 10px;
+    }
+  }
+
+  .subscriptions {
+    padding: 40px 30px;
+    background-color: $green;
+
+    & > div {
+      @include breakpoint(large) {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .title {
+      margin-bottom: 20px;
+      color: white;
+      font: 700 25px "Calps", sans-serif;
+      letter-spacing: 1.35px;
+
+      @include breakpoint(small) {
+        font: 700 57px "Calps", sans-serif;
+        letter-spacing: 0.57px;
+      }
+      @include breakpoint(large) {
+        margin: 0;
+        margin-right: 30px;
+      }
+    }
+
+    .message {
+      margin-top: 20px;
+      font: 20px "Roboto Mono", sans-serif;
+      color: white;
+    }
+  }
+}
+
+.mc-form {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+
+  .text {
+    width: 100%;
+    padding: 15px 50px 15px 15px;
+    background-color: transparent;
+    border: 3px solid white;
+    color: white;
+    font: 700 15px "Calps", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+    &::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      color: white;
+    }
+    &::-moz-placeholder {
+      /* Firefox 19+ */
+      color: white;
+    }
+    &:-ms-input-placeholder {
+      /* IE 10+ */
+      color: white;
+    }
+    &:-moz-placeholder {
+      /* Firefox 18- */
+      color: white;
+    }
+
+    @include breakpoint(small) {
+      padding: 12px 50px 12px 15px;
+      font: 700 20px "Roboto Mono", sans-serif;
+      letter-spacing: 8.05px;
+      color: white;
+
+      &::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        color: white;
+      }
+      &::-moz-placeholder {
+        /* Firefox 19+ */
+        color: white;
+      }
+      &:-ms-input-placeholder {
+        /* IE 10+ */
+        color: white;
+      }
+      &:-moz-placeholder {
+        /* Firefox 18- */
+        color: white;
+      }
+    }
+  }
+
+  .submit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 53px;
+    background-color: white;
+    font-size: 20px;
+
+    @include breakpoint(small) {
+      height: 55px;
+    }
+
+    &::before {
+      color: $green;
+
+      @include breakpoint(small) {
+        color: $green;
+      }
+    }
+  }
+
+  .message {
+    padding-left: 15px;
+
+    @include breakpoint(small) {
+      padding-left: 12px;
+    }
+  }
+
+  .error-message {
+    color: red;
+  }
+}
+
+.back-to-top {
+  background-color: #000;
+  display: none;
+  padding: 10px 0 12px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  transition: background-color 0.1s, opacity 0.1s, visibility 0.1s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+
+  @include breakpoint(medium) {
+    display: inline-block;
+  }
+
+  &:before {
+    color: #fff;
+    content: "\e916";
+    font-size: 11px;
+  }
+
+  &.show {
+    opacity: 0.1;
+    visibility: visible;
+  }
+
+  &.stop {
+    position: absolute;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $green;
+    border-color: $green;
+    opacity: 1;
+
+    &:before {
+      color: white;
+    }
+  }
+
+  @media (max-height: 700px) {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
+body.audio-player-open {
+  .back-to-top {
+    bottom: 142px;
+
+    @media (max-height: 700px) {
+      right: 20px;
+      bottom: 92px;
+    }
+  }
+}
