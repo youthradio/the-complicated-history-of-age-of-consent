@@ -1,5 +1,5 @@
 export default {
-  baseURL: '/History-of-Age-Consent',
+  baseURL: '/history-of-age-consent',
   title: 'Illegal Or Just Creepy? The Complicated History of Age of Consent',
   author: 'Jen Tribbet',
   publishDate: 'Jan. 28, 2020',
