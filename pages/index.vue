@@ -2,7 +2,9 @@
   <div class="container">
     <HeaderContainer />
     <article>
-      <template v-for="(paragraph,ind) in articleParagraphs">
+      <ProfileCard :profile-data="profilesData[1]" />
+
+      <template v-for="(paragraph, ind) in articleParagraphs">
         <p :key="paragraph" v-html="paragraph" />
         <MapContainer v-if="ind === 3" :key="paragraph + ind" />
       </template>
@@ -20,8 +22,9 @@ import ArticleData from '../data/data.json'
 import RelatedPostsContainer from '~/components/RelatedPosts/RelatedPostsContainer'
 import MapContainer from '~/components/Map/MapContainer'
 import HeaderContainer from '~/components/Header/HeaderContainer'
-import ShareContainer from '~/components/custom/ShareContainer'
+import ShareContainer from '~/components/Custom/ShareContainer'
 import FooterContainer from '~/components/Footer/FooterContainer'
+import ProfileCard from '~/components/Custom/ProfileCard'
 
 export default {
   components: {
@@ -29,7 +32,8 @@ export default {
     MapContainer,
     HeaderContainer,
     ShareContainer,
-    FooterContainer
+    FooterContainer,
+    ProfileCard
   },
   mixins: [
     CommonUtils
@@ -47,6 +51,9 @@ export default {
     articleParagraphs () {
       // regex match all paragraphs, return only inner content
       return [...this.articleData.text.matchAll(/<p>(.+?)<\/p>/g)].map(s => s[1])
+    },
+    profilesData () {
+      return this.articleData.cases
     }
   },
   watch: {
