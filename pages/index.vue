@@ -1,14 +1,19 @@
 <template>
   <div class="container">
     <HeaderContainer />
-    <article>
-      <ProfileCard :profile-data="profilesData[1]" />
-
-      <template v-for="(paragraph, ind) in articleParagraphs">
+    <!-- <template v-for="(paragraph, ind) in articleParagraphs">
         <p :key="paragraph" v-html="paragraph" />
-        <MapContainer v-if="ind === 3" :key="paragraph + ind" />
-      </template>
-    </article>
+
+      </template> -->
+
+    <v-runtime-template :template="articleText" />
+    <MapContainer />
+    <ProfileCard
+      v-for="profile in profilesData"
+      ref="profiles"
+      :key="profile.figure"
+      :profile-data="profile"
+    />
     <ShareContainer />
     <RelatedPostsContainer />
     <FooterContainer />
@@ -17,6 +22,7 @@
 
 <script>
 
+import VRuntimeTemplate from 'v-runtime-template'
 import CommonUtils from '../mixins/CommonUtils'
 import ArticleData from '../data/data.json'
 import RelatedPostsContainer from '~/components/RelatedPosts/RelatedPostsContainer'
@@ -33,7 +39,8 @@ export default {
     HeaderContainer,
     ShareContainer,
     FooterContainer,
-    ProfileCard
+    ProfileCard,
+    VRuntimeTemplate
   },
   mixins: [
     CommonUtils
@@ -48,9 +55,10 @@ export default {
     }
   },
   computed: {
-    articleParagraphs () {
+    articleText () {
+      return `<article>${this.articleData.text}</article>`
       // regex match all paragraphs, return only inner content
-      return [...this.articleData.text.matchAll(/<p>(.+?)<\/p>/g)].map(s => s[1])
+      // return [...this.articleData.text.matchAll(/<p>(.+?)<\/p>/g)].map(s => s[1])
     },
     profilesData () {
       return this.articleData.cases
@@ -60,6 +68,7 @@ export default {
 
   },
   mounted () {
+
   },
   methods: {
 
