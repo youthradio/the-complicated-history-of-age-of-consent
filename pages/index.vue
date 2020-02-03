@@ -7,13 +7,15 @@
       </template> -->
 
     <v-runtime-template :template="articleText" />
-    <MapContainer />
-    <ProfileCard
-      v-for="profile in profilesData"
-      ref="profiles"
-      :key="profile.figure"
-      :profile-data="profile"
-    />
+    <article>
+      <MapContainer />
+      <ProfileCard
+        v-for="profile in profilesData"
+        ref="profiles"
+        :key="profile.figure"
+        :profile-data="profile"
+      />
+    </article>
     <ShareContainer />
     <RelatedPostsContainer />
     <FooterContainer />
