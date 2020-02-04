@@ -8,7 +8,7 @@
 
     <v-runtime-template :template="articleText" />
     <article>
-      <MapContainer />
+      <MapContainer ref="map" />
       <ProfileCard
         v-for="profile in profilesData"
         ref="profiles"
@@ -70,7 +70,10 @@ export default {
 
   },
   mounted () {
-
+    [...this.$el.querySelectorAll('.profile-container')].forEach((node, id) => {
+      node.appendChild(this.$refs.profiles[id].$el)
+    })
+    this.$el.querySelector('.map-container').appendChild(this.$refs.map.$el)
   },
   methods: {
 
