@@ -78,7 +78,14 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "~@/css/vars";
 @import "~@/css/base";
+
+a {
+  border-bottom-color: $black;
+  &:hover{
+    background-color: lighten($black, 50%);
+  }
+}
 </style>
