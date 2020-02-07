@@ -15,9 +15,8 @@
         :key="profile.figure"
         :profile-data="profile"
       />
+      <ShareContainer />
     </article>
-    <ShareContainer />
-    <RelatedPostsContainer />
     <FooterContainer />
   </div>
 </template>
@@ -27,7 +26,6 @@
 import VRuntimeTemplate from 'v-runtime-template'
 import CommonUtils from '../mixins/CommonUtils'
 import ArticleData from '../data/data.json'
-import RelatedPostsContainer from '~/components/RelatedPosts/RelatedPostsContainer'
 import MapContainer from '~/components/Map/MapContainer'
 import HeaderContainer from '~/components/Header/HeaderContainer'
 import ShareContainer from '~/components/Custom/ShareContainer'
@@ -36,7 +34,6 @@ import ProfileCard from '~/components/Custom/ProfileCard'
 
 export default {
   components: {
-    RelatedPostsContainer,
     MapContainer,
     HeaderContainer,
     ShareContainer,
