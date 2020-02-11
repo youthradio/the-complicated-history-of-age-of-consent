@@ -67,10 +67,14 @@ export default {
 
   },
   mounted () {
+    this.$el.querySelector('.map-container').appendChild(this.$refs.map.$el);
     [...this.$el.querySelectorAll('.profile-container')].forEach((node, id) => {
       node.appendChild(this.$refs.profiles[id].$el)
     })
-    this.$el.querySelector('.map-container').appendChild(this.$refs.map.$el)
+    const tweetscr = document.createElement('script')
+    tweetscr.setAttribute('src', 'https://platform.twitter.com/widgets.js')
+    tweetscr.async = true
+    document.head.appendChild(tweetscr)
   },
   methods: {
 

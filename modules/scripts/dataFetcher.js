@@ -77,7 +77,7 @@ function markdown2html (data) {
         }
         if (key === 'text') {
           configDom = {
-            ALLOWED_TAGS: ['a', 'p', 'img', 'div', 'iframe', 'style', 'strong', 'i', 'h4'],
+            ALLOWED_TAGS: ['a', 'p', 'img', 'div', 'iframe', 'style', 'strong', 'i', 'h4', 'blockquote'],
             KEEP_CONTENT: true
           }
         }
