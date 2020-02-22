@@ -127,6 +127,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
+    transpile: ['3f03c8ac5dc1a903'],
     extend (config, { isDev, isClient, loaders: { vue } }) {
       if (isClient) {
         vue.transformAssetUrls.img = ['data-src', 'src']

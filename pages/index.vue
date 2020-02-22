@@ -8,7 +8,7 @@
 
     <v-runtime-template :template="articleText" />
     <article>
-      <MapContainer ref="map" />
+      <ObservableEl ref="map" />
       <ProfileCard
         v-for="profile in profilesData"
         ref="profiles"
@@ -26,7 +26,7 @@
 import VRuntimeTemplate from 'v-runtime-template'
 import CommonUtils from '../mixins/CommonUtils'
 import ArticleData from '../data/data.json'
-import MapContainer from '~/components/Map/MapContainer'
+import ObservableEl from '~/components/Custom/ObservableEl'
 import HeaderContainer from '~/components/Header/HeaderContainer'
 import ShareContainer from '~/components/Custom/ShareContainer'
 import FooterContainer from '~/components/Footer/FooterContainer'
@@ -34,7 +34,7 @@ import ProfileCard from '~/components/Custom/ProfileCard'
 
 export default {
   components: {
-    MapContainer,
+    ObservableEl,
     HeaderContainer,
     ShareContainer,
     FooterContainer,

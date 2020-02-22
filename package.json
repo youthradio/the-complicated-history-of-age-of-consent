@@ -14,7 +14,9 @@
     "gh-pages": "npm run generate && cd _site && git add . && git commit --amend --no-edit && git push  origin gh-pages --force"
   },
   "dependencies": {
+    "3f03c8ac5dc1a903": "https://api.observablehq.com/d/3f03c8ac5dc1a903.tgz?v=3",
     "@nuxtjs/google-gtag": "^1.0.4",
+    "@observablehq/runtime": "^4.7.0",
     "d3-array": "^2.4.0",
     "d3-color": "^1.4.0",
     "d3-composite-projections": "^1.3.2",

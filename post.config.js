@@ -8,7 +8,7 @@ export default {
   url: 'CANONICAL URL',
   featureImage:
     'https://interactive.yr.media/college-app-guide/images/college-guide-featurex1875.jpg',
-  featureImagePath: 'images/template-feature-image',
+  featureImagePath: 'images/aoc-history',
   featureImageDescription: 'Woman looking at kiosk.',
   featureImageCaption: '(Photo: Andersen Ross Photography Inc/Getty Images)',
 
