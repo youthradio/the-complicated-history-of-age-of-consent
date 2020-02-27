@@ -10,7 +10,7 @@ export default {
     'https://interactive.yr.media/college-app-guide/images/college-guide-featurex1875.jpg',
   featureImagePath: 'images/aoc-history',
   featureImageDescription: 'Woman looking at kiosk.',
-  featureImageCaption: '(Photo: Andersen Ross Photography Inc/Getty Images)',
+  featureImageCaption: null,
 
   wpPostSlug: 'north-carolina-vs-vaping-companies',
   wpPostID: '60986',

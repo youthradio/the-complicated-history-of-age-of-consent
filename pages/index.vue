@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <HeaderContainer />
+    <HeaderContainer mode="full" />
     <!-- <template v-for="(paragraph, ind) in articleParagraphs">
         <p :key="paragraph" v-html="paragraph" />
 
@@ -8,7 +8,14 @@
 
     <v-runtime-template :template="articleText" />
     <article>
-      <ObservableEl ref="map" />
+      <ObservableEl
+        ref="map"
+        cell-name="map"
+      />
+      <ObservableEl
+        ref="linechart"
+        cell-name="lineChart"
+      />
       <ProfileCard
         v-for="profile in profilesData"
         ref="profiles"
@@ -67,7 +74,9 @@ export default {
 
   },
   mounted () {
-    this.$el.querySelector('.map-container').appendChild(this.$refs.map.$el);
+    this.$el.querySelector('.map-container').appendChild(this.$refs.map.$el)
+    this.$el.querySelector('.linechart-container').appendChild(this.$refs.linechart.$el);
+
     [...this.$el.querySelectorAll('.profile-container')].forEach((node, id) => {
       node.appendChild(this.$refs.profiles[id].$el)
     })
@@ -88,7 +97,7 @@ export default {
 
 a {
   border-bottom-color: $black;
-  &:hover{
+  &:hover {
     background-color: lighten($black, 50%);
   }
 }
