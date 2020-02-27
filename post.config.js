@@ -7,7 +7,7 @@ export default {
   description: 'An interactive report on the history and cultural politics of "age of consent" laws and what they reveal about the boundary between relationships and crimes.',
   url: 'CANONICAL URL',
   featureImage:
-    'https://interactive.yr.media/the-complicated-history-of-age-of-consent/iamges/age_of_consent.jpg',
+    'https://interactive.yr.media/the-complicated-history-of-age-of-consent/images/age_of_consent.jpg',
   featureImagePath: 'images/aoc-history',
   featureImageDescription: 'Woman looking at kiosk.',
   featureImageCaption: null,
