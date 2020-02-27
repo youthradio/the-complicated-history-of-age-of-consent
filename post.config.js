@@ -12,8 +12,8 @@ export default {
   featureImageDescription: 'Woman looking at kiosk.',
   featureImageCaption: null,
 
-  wpPostSlug: null,
-  wpPostID: null,
+  wpPostSlug: 'north-carolina-vs-vaping-companies',
+  wpPostID: '60986',
   // you might not need to change
   fbAppID: '73080818131',
   twitterHandler: '@itsyrmedia'
