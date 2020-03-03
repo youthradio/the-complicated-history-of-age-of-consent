@@ -72,7 +72,8 @@ export default {
         href: 'favicon/safari-pinned-tab.svg'
       },
       {
-        rel: 'stylesheet',
+        rel: 'preload',
+        as: 'style',
         href: 'https://yr.media/statics/yr-media-typography/yr-typography.css'
       }
     ]
@@ -129,11 +130,11 @@ export default {
      */
     transpile: ['3f03c8ac5dc1a903'],
     extend (config, { isDev, isClient, loaders: { vue } }) {
+      config.resolve.alias.vue = 'vue/dist/vue.common'
       if (isClient) {
         vue.transformAssetUrls.img = ['data-src', 'src']
         vue.transformAssetUrls.source = ['data-srcset', 'srcset']
       }
-      config.resolve.alias.vue = 'vue/dist/vue.common'
     }
 
   }

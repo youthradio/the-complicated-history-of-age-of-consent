@@ -8,10 +8,10 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "deploy": "nuxt generate && rm -rf _site/* && cp -R dist/ _site/ && cp -R .github _site/",
     "generate": "nuxt generate && rm -rf _site/* && cp -R dist/ _site/",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "gh-pages": "npm run generate && cd _site && git add . && git commit --amend --no-edit && git push  origin gh-pages --force"
+    "gh-pages": "npm run generate && cd _site && git add . && git commit --amend --no-edit && git push  origin gh-pages --force",
+    "deploy": "npm run generate && cp -R .github _site/ && cd _site && git add . && git commit --amend --no-edit && git push  origin gh-pages --force"
   },
   "dependencies": {
     "3f03c8ac5dc1a903": "https://api.observablehq.com/d/3f03c8ac5dc1a903.tgz?v=3",
