@@ -6,7 +6,10 @@
 
       </template> -->
 
-    <v-runtime-template :template="articleText" />
+    <v-runtime-template
+      class="template-container"
+      :template="articleText"
+    />
     <article>
       <ObservableEl
         ref="map"
@@ -100,5 +103,8 @@ a {
   &:hover {
     background-color: lighten($black, 50%);
   }
+}
+.profile-container {
+  padding-top: 0.5rem;
 }
 </style>
