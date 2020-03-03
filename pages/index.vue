@@ -20,11 +20,23 @@
         cell-name="lineChart"
       />
       <ProfileCard
-        v-for="profile in profilesData"
+        v-for="(profile,index) in profilesData"
         ref="profiles"
         :key="profile.figure"
         :profile-data="profile"
+        :index="index"
       />
+      <div class="credits">
+        <h4> Credits: </h4>
+        <ul>
+          <li
+            v-for="(value, key) in credits"
+            :key="key"
+          >
+            <strong>{{ key }}:</strong> {{ value }}
+          </li>
+        </ul>
+      </div>
       <ShareContainer />
     </article>
     <FooterContainer />
@@ -71,6 +83,9 @@ export default {
     },
     profilesData () {
       return this.articleData.cases
+    },
+    credits () {
+      return this.articleData.credits
     }
   },
   watch: {
@@ -106,5 +121,13 @@ a {
 }
 .profile-container {
   padding-top: 0.5rem;
+}
+.credits {
+  ul {
+    margin-left: 0px;
+    margin-top: 0px;
+    padding-left: 0px;
+    list-style: none;
+  }
 }
 </style>

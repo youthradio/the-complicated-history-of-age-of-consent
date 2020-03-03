@@ -13,8 +13,8 @@ jobs:
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.key }}
+        key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
         script: |
-          cd static/static-nuxt-template
+          cd static/the-complicated-history-of-age-of-consent
           git fetch && git reset --hard FETCH_HEAD && git clean -df
