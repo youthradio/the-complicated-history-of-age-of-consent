@@ -101,7 +101,10 @@ export default {
     const tweetscr = document.createElement('script')
     tweetscr.setAttribute('src', 'https://platform.twitter.com/widgets.js')
     tweetscr.async = true
+    const base = document.createElement('base')
+    base.setAttribute('target', '_blank')
     document.head.appendChild(tweetscr)
+    document.head.appendChild(base)
   },
   methods: {
 
