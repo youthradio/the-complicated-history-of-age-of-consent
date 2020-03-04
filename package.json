@@ -14,7 +14,7 @@
     "deploy": "npm run generate && cp -R .github _site/ && cd _site && git add . && git commit --amend --no-edit && git push  origin gh-pages --force"
   },
   "dependencies": {
-    "3f03c8ac5dc1a903": "https://api.observablehq.com/d/3f03c8ac5dc1a903.tgz?v=3",
+    "3f03c8ac5dc1a903": "https://api.observablehq.com/d/3f03c8ac5dc1a903@2331.tgz?v=3",
     "@nuxtjs/google-gtag": "^1.0.4",
     "@observablehq/runtime": "^4.7.0",
     "d3-array": "^2.4.0",
