@@ -30,7 +30,7 @@
         <h4> Credits: </h4>
         <ul>
           <li
-            v-for="(value, key) in credits"
+            v-for="{key, value} in credits"
             :key="key"
           >
             <strong>{{ key }}:</strong> {{ value }}
