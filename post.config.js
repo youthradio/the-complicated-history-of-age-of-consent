@@ -2,7 +2,7 @@ export default {
   baseURL: '/the-complicated-history-of-age-of-consent',
   title: 'Illegal Or Just Creepy? The Complicated History of Age of Consent',
   author: 'Jen Tribbet',
-  publishDate: 'Jan. 28, 2020',
+  publishDate: 'MAR. 4, 2020',
   location: 'Oakland, CA',
   description: 'An interactive report on the history and cultural politics of "age of consent" laws and what they reveal about the boundary between relationships and crimes.',
   url: 'CANONICAL URL',
